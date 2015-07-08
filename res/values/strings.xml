@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CreditCal</string>
+    <string name="tv_credit_cal_title">贷款信息</string>
+    <string name="tv_credit_unit">万元。</string>
+    <string name="common_reserve_fund">本金</string>
+    <string name="tv_common_reserve_fund_standard_rate">利率:%1$.2f %。</string>
+    <string name="common_reserve_fund_info">公积金信息</string>
+    <string name="tv_common_reserve_fund_standard_rate_scale">倍率:%1$.2f</string>
+    <string name="business_credit_info">商业贷款信息</string>
+</resources>

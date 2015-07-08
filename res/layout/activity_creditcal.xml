@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/common_reserve_fund_info"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/common_reserve_fund"/>
+        <EditText android:id="@+id/et_common_reserve_fund"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:ems="3"
+                  android:numeric="decimal"
+                  android:digits="012345689."
+                  android:gravity="center"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_credit_unit"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_common_reserve_fund_standard_rate"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_common_reserve_fund_standard_rate_scale"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="30px"
+            />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/business_credit_info"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/common_reserve_fund"/>
+        <EditText android:id="@+id/et_business_credit"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:ems="3"
+                  android:numeric="decimal"
+                  android:digits="012345689."
+                  android:gravity="center"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_credit_unit"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_common_reserve_fund_standard_rate"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tv_common_reserve_fund_standard_rate_scale"/>
+    </LinearLayout>
+</LinearLayout>
