@@ -2,18 +2,15 @@ package cn.sh.elephant.creditcal.dao;
 
 import java.util.List;
 
-/**
- * Created by xiangqing on 2015/07/13.
- */
 public interface IBaseDao<T> {
 
     /**
-     * ?Œš•\
+     * åˆ›å»ºè¡¨
      */
     void createTable();
 
     /**
-     * ‡“üˆêğ??
+     * æ’å…¥ä¸€æ¡è®°å½•
      *
      * @param model
      * @return
@@ -21,7 +18,7 @@ public interface IBaseDao<T> {
     boolean insert(T model);
 
     /**
-     * ‡“ü‘½ğ??
+     * æ’å…¥å¤šæ¡è®°å½•
      *
      * @param model
      * @return
@@ -29,7 +26,7 @@ public interface IBaseDao<T> {
     boolean batchInsert(List<T> dataList);
 
     /**
-     * XV??
+     * æ›´æ–°è®°å½•
      *
      * @param model
      * @param whereClause
@@ -39,15 +36,15 @@ public interface IBaseDao<T> {
     boolean update(T model, String whereClause, String... whereArgs);
 
     /**
-     * ™r’è¥”Ûinsertˆ½ÒUpdate
+     * å†³å®šæ˜¯å¦insertæˆ–è€…Update
      * @param model
-     * @param bindColumnNames ?’è“I—ñ–¼ ,àÒ?¥å?
+     * @param bindColumnNames ç»‘å®šçš„åˆ—å ,é»˜è®¤æ˜¯ä¸»é”®
      * @return
      */
     boolean insertOrUpdate(T model,String... bindColumnNames);
 
     /**
-     * ?œ??
+     * åˆ é™¤è®°å½•
      *
      * @param whereClause
      * @param whereArgs
@@ -57,13 +54,13 @@ public interface IBaseDao<T> {
 
 
     /**
-     * ?œ‘S•”??
+     * åˆ é™¤å…¨éƒ¨è®°å½•
      * @return
      */
     boolean deleteAll();
 
     /**
-     * ª˜ğŒ??
+     * æ ¹æ®æ¡ä»¶æŸ¥è¯¢
      *
      * @param whereClause
      * @param whereArgs
@@ -72,7 +69,7 @@ public interface IBaseDao<T> {
     List<T> queryByCondition(String selection, String... selectionArgs);
 
     /**
-     *  ª˜ğŒ??
+     *  æ ¹æ®æ¡ä»¶æŸ¥è¯¢
      * @param columns
      * @param selection
      * @param orderBy
@@ -83,7 +80,7 @@ public interface IBaseDao<T> {
                              String orderBy, String... selectionArgs);
 
     /**
-     * ª˜ğŒ??
+     * æ ¹æ®æ¡ä»¶æŸ¥è¯¢
      * @param columns
      * @param selection
      * @param groupBy
@@ -97,14 +94,14 @@ public interface IBaseDao<T> {
                              String... selectionArgs);
 
     /**
-     * ‘ü—L—Bˆêˆêğ??“I??
+     * åªæœ‰å”¯ä¸€ä¸€æ¡è®°å½•çš„æŸ¥è¯¢
      *
-     * @return ”@‰Ê–v—L?•Ô‰ñnull
+     * @return å¦‚æœæ²¡æœ‰åˆ™è¿”å›null
      */
     T queryUniqueRecord(String selection,String... selectionArgs);
 
     /**
-     * ©’è???
+     * è‡ªå®šä¹‰æŸ¥è¯¢
      * @param sql
      * @param bindArgs
      * @return
@@ -113,7 +110,7 @@ public interface IBaseDao<T> {
 
 
     /**
-     * ?sInsert/Update/Delete“™‘´‘¼”ñ??SQL
+     * æ‰§è¡ŒInsert/Update/Deleteç­‰å…¶ä»–éæŸ¥è¯¢SQL
      * @param sql
      * @param bindArgs
      * @return
