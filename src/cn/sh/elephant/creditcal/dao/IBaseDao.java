@@ -106,7 +106,7 @@ public interface IBaseDao<T> {
      * @param bindArgs
      * @return
      */
-    List<QueryResult> execQuerySQL(String sql, String... bindArgs);
+    List<T> execQuerySQL(String sql, String... bindArgs);
 
 
     /**
