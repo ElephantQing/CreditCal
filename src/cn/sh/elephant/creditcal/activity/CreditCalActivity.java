@@ -41,10 +41,6 @@ public class CreditCalActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("Activity", "onCreate");
-        CreditDBOpenHelper credit = new CreditDBOpenHelper(this, CreditDBOpenHelper.DATABASE_NAME, null, CreditDBOpenHelper.DATABASE_VERSION);
-        SQLiteDatabase db = credit.getReadableDatabase();
-        Log.i("Activity","on Create DB");
-        db.getVersion();
+
     }
 }

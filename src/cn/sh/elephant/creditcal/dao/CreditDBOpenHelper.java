@@ -8,15 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by HomeStudio on 2015/7/13.
  */
 public class CreditDBOpenHelper extends SQLiteOpenHelper {
-    public static final String KEY_YEAR = "Year";
-    public static final String KEY_PERIOD = "Period";
-    public static final String KEY_C_RATE = "C_Rate";
-    public static final String DATABASE_NAME = "CreditCal.db";
-    public static final String KEY_B_RATE = "B_Rate";
+    public static final String KEY_YEAR = "year";
+    public static final String KEY_PERIOD = "period";
+    public static final String KEY_C_RATE = "cRate";
+    public static final String KEY_B_RATE = "bRate";
+    public static final String DATABASE_NAME = "creditCal.db";
     public static final String DATABASE_TABLE = "CreditRate";
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_CREATE = "create table " + DATABASE_TABLE + " (" + KEY_YEAR + " text, " + KEY_PERIOD + " interger, " + KEY_C_RATE + " real," + KEY_C_RATE + " real,"+
-    KEY_B_RATE+" real);";
+    public static final String DATABASE_CREATE = "create table " + DATABASE_TABLE + "(" + KEY_YEAR + " char(4), " + KEY_PERIOD + " int, " + KEY_C_RATE + " decimal(5,4), " + KEY_B_RATE + " decimal(5,4));";
 
     /**
      * Create a helper object to create, open, and/or manage a database.
@@ -44,7 +43,7 @@ public class CreditDBOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-    db.execSQL(DATABASE_CREATE);
+        db.execSQL(DATABASE_CREATE);
     }
 
     /**
