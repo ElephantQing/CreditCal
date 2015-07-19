@@ -3,19 +3,21 @@ package cn.sh.elephant.creditcal.dao;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by HomeStudio on 2015/7/13.
  */
 public class CreditDBOpenHelper extends SQLiteOpenHelper {
+    public static final String KEY_CREDIT_RATE_INDEX = "creditRateNo";
     public static final String KEY_YEAR = "year";
     public static final String KEY_PERIOD = "period";
     public static final String KEY_C_RATE = "cRate";
     public static final String KEY_B_RATE = "bRate";
     public static final String DATABASE_NAME = "creditCal.db";
-    public static final String DATABASE_TABLE = "CreditRate";
+    public static final String TABLE_CREDIT_RATE = "CreditRate";
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_CREATE = "create table " + DATABASE_TABLE + "(" + KEY_YEAR + " char(4), " + KEY_PERIOD + " int, " + KEY_C_RATE + " decimal(5,4), " + KEY_B_RATE + " decimal(5,4));";
+    private static final String CREATE_TABLE_CREDIT_RATE_ = "create table " + TABLE_CREDIT_RATE + "(" + KEY_CREDIT_RATE_INDEX + " Integer primary key autoincrement default 1," + KEY_YEAR + " char(4), " + KEY_PERIOD + " Integer, " + KEY_C_RATE + " decimal(5,4), " + KEY_B_RATE + " decimal(5,4));";
 
     /**
      * Create a helper object to create, open, and/or manage a database.
@@ -43,7 +45,7 @@ public class CreditDBOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(DATABASE_CREATE);
+        db.execSQL(CREATE_TABLE_CREDIT_RATE_);
     }
 
     /**
@@ -68,7 +70,9 @@ public class CreditDBOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        Log.i("CreditDBOpenHelper", "onUpgrade()");
+        db.execSQL("drop table if exists " + TABLE_CREDIT_RATE);
+        onCreate(db);
     }
 
 }

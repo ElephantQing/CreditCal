@@ -1,11 +1,8 @@
 package cn.sh.elephant.creditcal.activity;
 
 import android.app.Activity;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import cn.sh.elephant.creditcal.dao.CreditDBOpenHelper;
 
 /**
  * Created by HomeStudio on 2015/7/4.
