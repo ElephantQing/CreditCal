@@ -45,7 +45,7 @@ public class CreditDBOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_TABLE_CREDIT_RATE_);
+
     }
 
     /**

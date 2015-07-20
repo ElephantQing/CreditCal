@@ -9,6 +9,15 @@ import cn.sh.elephant.creditcal.dao.CreditDBOpenHelper;
  * Created by HomeStudio on 2015/7/15.
  */
 public class CreditCalApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.i("Application", "onCreate");
+        CreditDBOpenHelper credit = new CreditDBOpenHelper(this, CreditDBOpenHelper.DATABASE_NAME, null, CreditDBOpenHelper.DATABASE_VERSION);
+        SQLiteDatabase db = credit.getReadableDatabase();
+        Log.i("Application","on Create DB");
+        db.getVersion();
+    }
 
     /**
      * Called when the application is starting, before any activity, service,

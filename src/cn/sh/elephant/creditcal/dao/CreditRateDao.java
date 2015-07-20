@@ -11,12 +11,11 @@ import java.util.List;
  * Created by HomeStudio on 2015/7/19.
  */
 public class CreditRateDao implements IBaseDao<CreditRate> {
-    private CreditDBOpenHelper mDBHelper;
     private SQLiteDatabase mDatabase;
 
-    public CreditRateDao(Context context) {
+    public CreditRateDao(SQLiteDatabase db) {
         super();
-        mDBHelper = new CreditDBOpenHelper(context, CreditDBOpenHelper.DATABASE_NAME, null, CreditDBOpenHelper.DATABASE_VERSION);
+        mDatabase = db;
     }
 
     /**
@@ -24,7 +23,6 @@ public class CreditRateDao implements IBaseDao<CreditRate> {
      */
     @Override
     public void createTable() {
-        mDatabase = mDBHelper.getReadableDatabase();
         mDatabase.execSQL(CreditDBOpenHelper.TABLE_CREDIT_RATE);
     }
 

@@ -17,12 +17,15 @@ public interface IBaseDao<T> {
      */
     boolean insert(T model);
 
+
     /**
      * 插入多条记录
      *
-     * @param model
+     * @param dataList
      * @return
      */
+
+
     boolean batchInsert(List<T> dataList);
 
     /**
@@ -62,8 +65,8 @@ public interface IBaseDao<T> {
     /**
      * 根据条件查询
      *
-     * @param whereClause
-     * @param whereArgs
+     * @param selection
+     * @param selectionArgs
      * @return
      */
     List<T> queryByCondition(String selection, String... selectionArgs);
