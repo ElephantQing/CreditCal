@@ -37,8 +37,5 @@ public class CreditCalApp extends Application {
      * service, or receiver in a process.
      * If you override this method, be sure to call super.onCreate().
      */
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
+
 }
